@@ -1,0 +1,37 @@
+{{#if isEdit}}
+  <h1>Edit the game</h1>
+  <form action="/games/{{game._id}}" method="POST">
+{{else}}
+  <h1>Create a new game</h1>
+  <form action="/games" method="POST">
+{{/if}}
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input value="{{game.title}}" type="text" class="form-control" id="title" name="title" placeholder="God of war" required>
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Image</label>
+    <input value="{{game.image}}" type="text" class="form-control" id="image" name="image" placeholder="Add url of the image" required>
+  </div>
+  {{#unless isEdit}}
+    <div class="mb-3">
+      <label for="publicationYear" class="form-label">Publication year</label>
+      <input value="{{game.publicationYear}}" type="number" class="form-control" id="publicationYear" name="publicationYear" placeholder="1994" required>
+    </div>
+  {{/unless}}
+  <div class="mb-3">
+    <label for="genre" class="form-label">Genre</label>
+    <select id="genre" class="form-select" name="genre" required>
+      <option selected>Select a genre for the game</option>
+      {{#each genres}}
+        <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description of the game</label>
+    <textarea class="form-control" id="description" name="description" rows="5" required>{{game.description}}</textarea>
+  </div>
+
+  <button class="btn btn-primary">Submit</button>
+</form>

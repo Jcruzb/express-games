@@ -1,0 +1,23 @@
+[
+  {
+    "title": "God of War",
+    "publicationYear": 2023,
+    "description": "lorem ipsum",
+    "genre": "Action",
+    "image": "https://thumb.pccomponentes.com/w-530-530/articles/1047/10472222/1365-god-of-war-ragnarok-ps5.jpg"
+  },
+  {
+    "title": "Gran Turismo 7",
+    "publicationYear": 2023,
+    "description": "lorem ipsum",
+    "genre": "Sports",
+    "image": "https://thumb.pccomponentes.com/w-530-530/articles/83/838537/1202-gran-turismo-7-ps5.jpg"
+  },
+  {
+    "title": "Spider-Man",
+    "publicationYear": 2022,
+    "description": "lorem ipsum",
+    "genre": "Platforms",
+    "image": "https://thumb.pccomponentes.com/w-530-530/articles/33/335395/1222-marvels-spider-man-miles-morales-ps5.jpg"
+  }
+]

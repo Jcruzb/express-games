@@ -1,0 +1,1 @@
+module.exports = ['Action', 'Platforms', 'Sports', 'Shooters', 'MMO']

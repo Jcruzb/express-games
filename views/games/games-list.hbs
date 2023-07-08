@@ -1,0 +1,18 @@
+<h1>Games</h1>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  {{#each games}}
+    <div class="col">
+      <div class="card">
+        <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{publicationYear}}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{genre}}</h6>
+          <p class="card-text">{{description}}</p>
+          <a href="/games/{{_id}}" class="btn btn-primary">See more details</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
