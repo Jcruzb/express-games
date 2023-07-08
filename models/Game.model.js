@@ -4,6 +4,9 @@ const REQUIRED_ERROR = 'Required field';
 
 const GENRES = require('../data/genres');
 
+const Publisher = require('../models/Publisher.model');
+const Review = require('../models/Review.model');
+
 // Schema
 
 const GameSchema = new mongoose.Schema(
@@ -28,12 +31,25 @@ const GameSchema = new mongoose.Schema(
     image: {
       type: String,
       required: [true, REQUIRED_ERROR],
-    }
+    },
+    publishers: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: Publisher.modelName,
+      required: true
+    },
   },
   {
     timestamps: true,
+    virtuals: true,
   }
 )
+
+GameSchema.virtual('reviews', {
+  ref: Review.modelName,
+  foreignField: 'game',
+  localField: '_id',
+  justOne: false,
+})
 
 // Model
 

@@ -29,6 +29,14 @@
     </select>
   </div>
   <div class="mb-3">
+    <label for="publishers" class="form-label">Publishers</label>
+    <select id="publishers" class="form-select" name="publishers" required multiple>
+      {{#each publishers as |publisher|}}
+        <option value="{{publisher._id}}">{{publisher.name}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="mb-3">
     <label for="description" class="form-label">Description of the game</label>
     <textarea class="form-control" id="description" name="description" rows="5" required>{{game.description}}</textarea>
   </div>
